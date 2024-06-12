@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bone"
+    tools:context=".SimodelActivity">
+
+
+    <EditText
+        android:id="@+id/edtsh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Input TSH (0.01-530)"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/taupe"
+        android:textColor="@color/taupe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Input T3 (0.05-18)"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/taupe"
+        android:textColor="@color/taupe"
+        app:layout_constraintEnd_toEndOf="@+id/edtsh"
+        app:layout_constraintStart_toStartOf="@+id/edtsh"
+        app:layout_constraintTop_toBottomOf="@+id/edtsh" />
+
+    <EditText
+        android:id="@+id/edfti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Input FTI (1.4-881)"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/taupe"
+        android:textColor="@color/taupe"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt3"
+        app:layout_constraintStart_toStartOf="@+id/edt3"
+        app:layout_constraintTop_toBottomOf="@+id/edt3" />
+
+    <EditText
+        android:id="@+id/edtt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Input TT4 (2-600)"
+        android:textColor="@color/taupe"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/taupe"
+        app:layout_constraintEnd_toEndOf="@+id/edfti"
+        app:layout_constraintStart_toStartOf="@+id/edfti"
+        app:layout_constraintTop_toBottomOf="@+id/edfti" />
+
+    <EditText
+        android:id="@+id/edquery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Input QueryThyroid (0/1)"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/taupe"
+        android:textColor="@color/taupe"
+        app:layout_constraintEnd_toEndOf="@+id/edtt4"
+        app:layout_constraintStart_toStartOf="@+id/edtt4"
+        app:layout_constraintTop_toBottomOf="@+id/edtt4" />
+
+    <EditText
+        android:id="@+id/edtumor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Input Tumor (0/1)"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="@color/taupe"
+        android:textColorHint="@color/taupe"
+        app:layout_constraintEnd_toEndOf="@+id/edquery"
+        app:layout_constraintStart_toStartOf="@+id/edquery"
+        app:layout_constraintTop_toBottomOf="@+id/edquery" />
+
+    <EditText
+        android:id="@+id/edtt4mes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="Input TT4Measured (0/1)"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/taupe"
+        android:textColor="@color/taupe"
+        app:layout_constraintEnd_toEndOf="@+id/edtumor"
+        app:layout_constraintStart_toStartOf="@+id/edtumor"
+        app:layout_constraintTop_toBottomOf="@+id/edtumor" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Prediksi"
+        android:textColor="@color/bone"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edtt4mes"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/edtt4mes"
+        app:layout_constraintTop_toBottomOf="@+id/edtt4mes"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/taupe"
+        app:layout_constraintEnd_toEndOf="@+id/btnCheck"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/btnCheck"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
